@@ -17,8 +17,13 @@ include 'services:webservice'
 
 rootProject.name = 'spring-security'
 
-include 'security-javaconfig'
-//include 'security-xmlcofig'
-include 'security-with-rest'
-//include 'security-with-rest-xmlconfig'
+//java config project
+//include 'security-javaconfig'
+//include 'security-with-rest'
+include 'security-with-jpa'
 
+
+//xml config project
+//include 'security-xmlcofig'
+//include 'security-with-rest-xmlconfig'
+//include 'security-with-jpa-xmlconfig'

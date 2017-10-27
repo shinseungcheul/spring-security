@@ -19,4 +19,6 @@ rootProject.name = 'spring-security'
 
 include 'security-javaconfig'
 //include 'security-xmlcofig'
+include 'security-with-rest'
+//include 'security-with-rest-xmlconfig'
 

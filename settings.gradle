@@ -20,10 +20,12 @@ rootProject.name = 'spring-security'
 //java config project
 //include 'security-javaconfig'
 //include 'security-with-rest'
-include 'security-with-jpa'
+//include 'security-with-jpa'
+include 'security-mehtod-security'
 
 
 //xml config project
-//include 'security-xmlcofig'
-//include 'security-with-rest-xmlconfig'
-//include 'security-with-jpa-xmlconfig'
+//include 'security-xml'
+//include 'security-with-rest-xml'
+//include 'security-with-jpa-xml'
+//include 'security-method-security-xml'

@@ -21,7 +21,9 @@ rootProject.name = 'spring-security'
 //include 'security-javaconfig'
 //include 'security-with-rest'
 //include 'security-with-jpa'
-include 'security-mehtod-security'
+//include 'security-mehtod-security'
+include 'security-rememberme'
+
 
 
 //xml config project
@@ -29,3 +31,4 @@ include 'security-mehtod-security'
 //include 'security-with-rest-xml'
 //include 'security-with-jpa-xml'
 //include 'security-method-security-xml'
+//include 'security-rememberme-xml'

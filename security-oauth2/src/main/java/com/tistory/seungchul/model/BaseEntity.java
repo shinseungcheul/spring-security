@@ -13,7 +13,7 @@ public abstract class BaseEntity implements Serializable  {
 
 	@Id
 	@Column(name = "OID")
-	private String oid ;
+	String oid ;
 	
 	
 }

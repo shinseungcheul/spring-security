@@ -15,4 +15,9 @@ public interface UserService {
 	@Secured("ROLE_Admin")
 	public List<UserEntity> getAllUser();
 	
+	public void addUser(UserEntity user);
+	
+	@Secured("ROLE_Admin")
+	public void removeUser(String userId);
+	
 }

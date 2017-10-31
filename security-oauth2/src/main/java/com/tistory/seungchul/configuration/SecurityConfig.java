@@ -10,6 +10,7 @@ import org.springframework.security.access.expression.method.MethodSecurityExpre
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -29,11 +30,11 @@ import org.springframework.web.filter.CorsFilter;
 
 @Configuration
 @EnableWebSecurity
-//@EnableGlobalMethodSecurity(
-//		prePostEnabled = true,
-//		proxyTargetClass = true,
-//		securedEnabled = true
-//)
+@EnableGlobalMethodSecurity(
+		prePostEnabled = true,
+		proxyTargetClass = true,
+		securedEnabled = true
+)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	private static final Logger log = LoggerFactory.getLogger(SecurityConfig.class);
@@ -65,7 +66,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/oauth/**")
 			.and()
 			.authorizeRequests()
-				.antMatchers("/oauth/token").permitAll();
+				.antMatchers("/oauth/token").permitAll()
+				.anyRequest().hasRole("User");
 	
 	}
 	
@@ -119,15 +121,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	
 	
-	
-	
-	
-	
-	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
 		web.ignoring().antMatchers(HttpMethod.OPTIONS,"/**")
 			.antMatchers("/h2-console/**");
 	}
+	
+	
 	
 }

@@ -1,5 +1,6 @@
 package com.tistory.seungchul.model.user;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.AttributeOverride;
@@ -7,6 +8,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.PostPersist;
@@ -21,12 +23,18 @@ import lombok.Data;
 @Table(name = "USER_ENTITY")
 @AttributeOverride(name = "OID", column = @Column(name  = "OID"))
 @Data
-public class UserEntity extends BaseEntity {
+public class UserEntity implements Serializable  {
 
 	private static final long serialVersionUID = -3017887802298899188L;
 	
+	@Id
+	@Column( name = "OID")
+	private String oid ;
+	
+	@Column( name = "USERID", unique = true, nullable = false)
 	private String userId;
 	
+	@Column( name = "PASSWORD", nullable = false)
 	private String password;
 	
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)

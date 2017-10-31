@@ -8,13 +8,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.tistory.seungchul.model.BaseEntity;
+
 import lombok.Data;
 
 @Entity
 @Table(name = "USER_AUTHORITY")
 @AttributeOverride(name = "OID", column = @Column(name  = "OID"))
 @Data
-public class UserAuthority implements Serializable {
+public class UserAuthority extends BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = 1775961916786713755L;
 

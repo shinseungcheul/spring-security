@@ -23,13 +23,13 @@ import lombok.Data;
 @Table(name = "USER_ENTITY")
 @AttributeOverride(name = "OID", column = @Column(name  = "OID"))
 @Data
-public class UserEntity implements Serializable  {
+public class UserEntity extends BaseEntity implements Serializable  {
 
 	private static final long serialVersionUID = -3017887802298899188L;
 	
-	@Id
-	@Column( name = "OID")
-	private String oid ;
+//	@Id
+//	@Column( name = "OID")
+//	private String oid ;
 	
 	@Column( name = "USERID", unique = true, nullable = false)
 	private String userId;

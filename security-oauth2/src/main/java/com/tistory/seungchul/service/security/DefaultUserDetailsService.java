@@ -1,4 +1,4 @@
-package com.tistory.seungchul.service.user;
+package com.tistory.seungchul.service.security;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import com.tistory.seungchul.model.user.UserAuthority;
 import com.tistory.seungchul.model.user.UserEntity;
+import com.tistory.seungchul.service.user.UserService;
 
 @Service("userDetailsService")
 public class DefaultUserDetailsService implements UserDetailsService {

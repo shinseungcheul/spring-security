@@ -23,8 +23,8 @@ rootProject.name = 'spring-security'
 //include 'security-with-jpa'
 //include 'security-mehtod-security'
 //include 'security-rememberme' 
-include 'security-oauth2'
-
+//include 'security-oauth2'
+include 'security-oauth-resource'
 
 
 //xml config project
@@ -34,3 +34,4 @@ include 'security-oauth2'
 //include 'security-method-security-xml'
 //include 'security-rememberme-xml'
 //include 'security-oauth2-xml'
+//include 'security-oauth-resource-xml'

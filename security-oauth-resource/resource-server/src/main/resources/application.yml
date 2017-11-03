@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  management:
+    port: 8090
+    
+remote:
+  server:
+    checkUrl: http://localhost:8081/oauth/check_token
+    clientId: trust-client-first
+    clientSecret: "1234"
+
+---
+spring:
+  profiles: local, default
+datasource:
+  server:
+    url: jdbc:h2:~/resource
+    username: SA
+    password: 
+    driverClassName: org.h2.Driver
+    defaultSchema:
+    maxPoolSize: 10
+    hibernate:
+      hbm2ddl.method: create-drop
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.H2Dialect
+
+    

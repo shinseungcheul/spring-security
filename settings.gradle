@@ -7,8 +7,8 @@ rootProject.name = 'spring-security'
 //include 'security-mehtod-security'
 //include 'security-rememberme' 
 //include 'security-oauth2'
-include 'security-oauth-resource:oauth2-server'
-include 'security-oauth-resource:resource-server'
+//include 'security-oauth-resource:oauth2-server'
+//include 'security-oauth-resource:resource-server'
 
 
 //xml config project
